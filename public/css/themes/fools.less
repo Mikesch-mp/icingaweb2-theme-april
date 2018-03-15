@@ -1,0 +1,109 @@
+/* always show scroll bars */
+html {
+    overflow: scroll !important;
+    height: 100.1% !important;
+    width: 100.1% !important;
+}
+/*
+  blur every website for a split second every 30 seconds
+*/
+body {
+  -webkit-animation: blur 15s infinite;
+}
+
+/*
+  Flip all images upside down
+*/
+img {
+    -webkit-transform: rotate(180deg) !important; /* Chrome, Safari 3.1+ */
+    -moz-transform: rotate(180deg) !important; /* Firefox 3.5-15 */
+    -ms-transform: rotate(180deg) !important; /* IE 9 */
+    -o-transform: rotate(180deg) !important; /* Opera 10.50-12.00 */
+    transform: rotate(180deg) !important; /* Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+/* slightly smaller first letters */
+*:first-letter {
+    font-size: 90% !important;
+}
+
+/*
+  Hide every 2nd paragraph element on a page
+*/
+p:nth-child(2) {
+  /*display:none !important;*/
+}
+
+/*
+  hide the cursor all together
+*/
+html {
+  cursor:none !important;
+}
+
+/*
+  slowly grow text
+*/
+h1 {
+  -webkit-animation: grow 180s ease-in;
+  -moz-animation: grow 180s ease-in;
+  animation: grow 180s ease-in;
+}
+
+/*
+	Insert a phrase every paragraph
+*/
+/*
+p:before {
+   content: "YOLO ";
+}
+*/
+
+/* Animations */
+
+@-webkit-keyframes blur {
+  0%   { -webkit-filter: blur(0px); }
+  49%   { -webkit-filter: blur(0px); }
+  50%   { -webkit-filter: blur(1px); }
+  51%   { -webkit-filter: blur(0px); }
+  100%   { -webkit-filter: blur(0px); }
+}
+
+@-webkit-keyframes grow {
+  0%   { font-size: none; }
+  100%   { font-size: 80pt; }
+}
+@-moz-keyframes grow {
+  0%   { font-size: none; }
+  100%   { font-size: 80pt; }
+}
+@keyframes grow {
+  0%   { font-size: none; }
+  100%   { font-size: 80pt; }
+}
+
+
+@-webkit-keyframes fade { /* Chrome, Safari 5+ */
+    0% { opacity: 0.98; }
+    100% { opacity: 0.49; }
+}
+@-moz-keyframes fade { /* Firefox 5-15 */
+    0% { opacity: 0.98; }
+    100% { opacity: 0.49; }
+}
+@-o-keyframes fade { /* Opera 12.00 */
+    0% { opacity: 0.98; }
+    100% { opacity: 0.49; }
+}
+@keyframes fade { /* Chrome, Firefox 16+, IE 10+, Opera 12.10+ */
+    0% { opacity: 0.98; }
+    100% { opacity: 0.49; }
+}
+
+/* Oh were you reading that? */
+p {
+    -webkit-animation: fade 60s infinite; /* Chrome, Safari 5+ */
+    -moz-animation: fade 60s infinite; /* Firefox 5-15 */
+    -o-animation: fade 60s infinite; /* Opera 12.00 */
+    animation: fade 60s infinite; /* Chrome, Firefox 16+, IE 10+, Opera 12.10+ */
+}
