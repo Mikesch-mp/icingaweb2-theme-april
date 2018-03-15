@@ -7,10 +7,10 @@ html {
 /*
   blur every website for a split second every 30 seconds
 */
-body {
-  -webkit-animation: blur 15s infinite;
-}
+html {
+  animation: blured 15s infinite;
 
+}
 /*
   Flip all images upside down
 */
@@ -27,12 +27,6 @@ img {
     font-size: 90% !important;
 }
 
-/*
-  Hide every 2nd paragraph element on a page
-*/
-p:nth-child(2) {
-  /*display:none !important;*/
-}
 
 /*
   hide the cursor all together
@@ -47,33 +41,35 @@ html {
 h1 {
   -webkit-animation: grow 180s ease-in;
   -moz-animation: grow 180s ease-in;
+  -ms-animation: grow 180s ease-in;
+  -o-animation: grow 180s ease-in;
   animation: grow 180s ease-in;
 }
 
-/*
-	Insert a phrase every paragraph
-*/
-/*
-p:before {
-   content: "YOLO ";
-}
-*/
-
 /* Animations */
 
-@-webkit-keyframes blur {
-  0%   { -webkit-filter: blur(0px); }
-  49%   { -webkit-filter: blur(0px); }
-  50%   { -webkit-filter: blur(1px); }
-  51%   { -webkit-filter: blur(0px); }
-  100%   { -webkit-filter: blur(0px); }
+@keyframes blured {
+  0%   { filter: blur(0px); }
+  49%   { filter: blur(0px); }
+  50%   { filter: blur(5px); }
+  51%   { filter: blur(0px); }
+  100%   { filter: blur(0px); }
 }
+
 
 @-webkit-keyframes grow {
   0%   { font-size: none; }
   100%   { font-size: 80pt; }
 }
 @-moz-keyframes grow {
+  0%   { font-size: none; }
+  100%   { font-size: 80pt; }
+}
+@-ms-keyframes grow {
+  0%   { font-size: none; }
+  100%   { font-size: 80pt; }
+}
+@-o-keyframes grow {
   0%   { font-size: none; }
   100%   { font-size: 80pt; }
 }
