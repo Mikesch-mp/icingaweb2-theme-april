@@ -1,19 +1,12 @@
-/* always show scroll bars */
 html {
     overflow: scroll !important;
     height: 100.1% !important;
     width: 100.1% !important;
 }
-/*
-  blur every website for a split second every 30 seconds
-*/
 html {
-  animation: blured 15s infinite;
+  animation: blured 30s infinite;
 
 }
-/*
-  Flip all images upside down
-*/
 img {
     -webkit-transform: rotate(180deg) !important; /* Chrome, Safari 3.1+ */
     -moz-transform: rotate(180deg) !important; /* Firefox 3.5-15 */
@@ -22,31 +15,17 @@ img {
     transform: rotate(180deg) !important; /* Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
-/* slightly smaller first letters */
-*:first-letter {
-    font-size: 90% !important;
+*:first-letter:not(h1) {
+    font-size: 85% !important;
 }
 
-
-/*
-  hide the cursor all together
-*/
 html {
   cursor:none !important;
 }
 
-/*
-  slowly grow text
-*/
 h1 {
-  -webkit-animation: grow 180s ease-in;
-  -moz-animation: grow 180s ease-in;
-  -ms-animation: grow 180s ease-in;
-  -o-animation: grow 180s ease-in;
-  animation: grow 180s ease-in;
+  animation: grow 500s ease-in;
 }
-
-/* Animations */
 
 @keyframes blured {
   0%   { filter: blur(0px); }
@@ -57,22 +36,6 @@ h1 {
 }
 
 
-@-webkit-keyframes grow {
-  0%   { font-size: none; }
-  100%   { font-size: 80pt; }
-}
-@-moz-keyframes grow {
-  0%   { font-size: none; }
-  100%   { font-size: 80pt; }
-}
-@-ms-keyframes grow {
-  0%   { font-size: none; }
-  100%   { font-size: 80pt; }
-}
-@-o-keyframes grow {
-  0%   { font-size: none; }
-  100%   { font-size: 80pt; }
-}
 @keyframes grow {
   0%   { font-size: none; }
   100%   { font-size: 80pt; }
@@ -96,7 +59,6 @@ h1 {
     100% { opacity: 0.49; }
 }
 
-/* Oh were you reading that? */
 p {
     -webkit-animation: fade 60s infinite; /* Chrome, Safari 5+ */
     -moz-animation: fade 60s infinite; /* Firefox 5-15 */
