@@ -12,8 +12,11 @@ img {
     -moz-transform: rotate(180deg) !important; /* Firefox 3.5-15 */
     -ms-transform: rotate(180deg) !important; /* IE 9 */
     -o-transform: rotate(180deg) !important; /* Opera 10.50-12.00 */
-    transform: rotate(180deg) !important; /* Firefox 16+, IE 10+, Opera 12.10+ */
+    transform: rotate(180deg); /* !important; *//* Firefox 16+, IE 10+, Opera 12.10+ */
+    position:relative; 
+    z-index: -1;
 }
+
 
 *:first-letter:not(h1) {
     font-size: 85% !important;
